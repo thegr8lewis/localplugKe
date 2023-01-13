@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>local plug</title>
+        <link rel="stylesheet" href="shoestore.css">
+        <link rel="icon" type="x-icon" href="screwed.PNG">
+        <script src="https://kit.fontawesome.com/3cb43d34ea.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <header>
+
+
+                <i class="fa-solid fa-bars" onclick="display()" id="menubtn" ></i>
+                <a href="#" class="logo">Local plug</a>
+                <nav class="navbar">
+                    <a href="#home" ><i class="fa-solid fa-house"></i></a>
+                    <a href="#product">Product</a>
+                    <a href="#New in stock">latest</a>
+                    <a href="#feedback">Feedback</a>
+                </nav>
+                <div class="icons">
+                    <div class="call">
+                        <a href="tel:070-858-7976" target="_blank"><i class="fa-sharp fa-solid fa-phone-volume"></i></a>
+                    </div>
+                    <div class="whatsapp1"> 
+                        <a href="https://wa.me/0708587926" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                     </div>
+                    <div class="instagram">
+                        <a href="https://instagram.com/thegr8lewis?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+    </header>
+    <!--end of header-->
+<div class="scrollbar">
+    <!--section HOME-->
+   <section class="home" id="home">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <span>JORDAN</span>
+                    <h3> J4 Bred OG</h3>
+                    <p>This AJ 4, also known as "Black Cement 4,"
+                        comes with a black upper plus grey accents, white 
+                        midsole plus black, white and grey accents, and a red sole. 
+                        These sneakers released in May 2019 and retailed for KSH,3500.
+                        Thrive in one of Jordan's most iconic sneakers ever,
+                        so make sure you have a pair of your own
+                        
+                    </p>
+                    <div class="size">
+                        <input type="button" class="btn"value="Add to cart" onclick="addToCart()">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="./IMG_20221219_165227.jpg" class="shoe">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>JORDAN</span>
+                    <h3> J1 university Blue</h3>
+                    <p>The shoe brings genuine University Blue leather to the ankle,
+                         heel, toe and outsole, with black on the Swoosh
+                          and collar and contrasting white on the quarter panel,
+                           midsole, tongue and toe box. 
+                           A black Wings logo with University Blue branding on
+                            the tongue helps finish off the model's clean and classic detailing
+                        
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>
+                <div class="image">
+                    <img src="./2.jpg" class="shoe">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>JORDAN</span>
+                    <h3> J4 X Union</h3>
+                    <p>Air Jordan 4 x UNION LA Since his game-winning shot
+                         that brought championship glory to North Carolina,
+                          Michael Jordan has been at the forefront of basketball consciousness. 
+                          He took to the court in 1985 wearing the original Air Jordan I,
+                           simultaneously breaking league rules and his opponents'
+                            will while capturing the imagination of fans worldwide.
+                        
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>
+                <div class="image">
+                    <img src="./IMG_20221219_165326.jpg" class="shoe">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>JORDAN</span>
+                    <h3> J4 Black</h3>
+                    <p>
+                        Jordan Brand brings back a mid-2000’s classic 
+                        with the Jordan 4 Black Cat (2020), now available on StockX. 
+                        Originally debuting in 2006, this is the first time the
+                        Black Cat colorway has seen a retro. The fourteen year
+                        Black Cat drought has officially ended. 
+                        This Jordan 4 is composed of a black nubuck suede 
+                        upper with matching detailing.  
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>
+                <div class="image">
+                    <img src="./j4 black.jpg" class="shoe">
+                </div>
+            </div>
+        </div>
+    
+            <img src="rewind.png" id="prevbtn" onclick="prev()">
+            <img src="fast-forward (1).png" id="nextbtn" onclick="next()">
+</section>
+    <!--End of section home-->
+
+    <!--Section New product-->
+<section class="product" id="product">
+        <h1 class="heading">latest <span> products</span></h1>
+            <div class="box-container">
+
+                <div class="box">
+                    <div class="icons">
+                        <input type="button" value="share" id="sharebtn">
+                        <input type="button" value="like" id="likebtn">
+                    </div>
+                    <div class="content">
+                        <img src="./IMG_20221224_005146.jpg" alt="">
+                        <h3>Air force 1 (white)</h3>
+                        <div class="price">ksh,2500 <span>ksh,3000</span></div>
+                            
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icons">
+                        <input type="button" value="share" id="sharebtn">
+                        <input type="button" value="like" id="likebtn">
+                    </div>
+                    <div class="content">
+                        <img src="./black.jpg" alt="">
+                        <h3>Air force 1 (Black)</h3>
+                        <div class="price">ksh,2500 <span>ksh,3000</span></div>
+                            
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icons">
+                        <input type="button" value="share" id="sharebtn">
+                        <input type="button" value="like" id="likebtn">
+                    </div>
+                    <div class="content">
+                        <img src="./balmain.jpg" alt="">
+                        <h3>balmain</h3>
+                        <div class="price">ksh,25000 <span>ksh,30000</span></div>
+                            
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icons">
+                        <input type="button" value="share" id="sharebtn">
+                        <input type="button" value="like" id="likebtn">
+                    </div>
+                    <div class="content">
+                        <img src="./nocta 1.jpg" alt="">
+                        <h3>Nocta Shoes</h3>
+                        <div class="price">ksh,4200 <span>ksh,5500</span></div>
+                            
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icons">
+                        <input type="button" value="share" id="sharebtn">
+                        <input type="button" value="like" id="likebtn">
+                    </div>
+                    <div class="content">
+                        <img src="./Gucci-Rython-Vintage-Logo-Product.jpg" alt="">
+                        <h3>Gucci-Rython-Vintage</h3>
+                        <div class="price">ksh,3000 <span>ksh,3500</span></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icons">
+                        <input type="button" value="share" id="sharebtn">
+                        <input type="button" value="like" id="likebtn">
+                    </div>
+                    <div class="content">
+                        <img src="./lv sneaker.jpg" alt="">
+                        <h3>LV trainer sneaker</h3>
+                        <div class="price">ksh,4500 <span>ksh,5000</span></div>     
+                    </div>
+                </div>
+            </div>
+</section>
+<!--end of product section -->
+<!--customer survice-->
+<section class="featured" id="New in stock">
+    <h1 class="heading"> New <span>product</span></h1>
+        <div class="row">
+            <div class="image-container">
+                <div class="small-image">
+                    <img src="./j11 p0.png" alt="" class="featured-image-1" onclick="display()">
+                    <img src="./j11 p2.png" alt="" class="featured-image-1"  onclick="display()">
+                    <img src="./j11 p1.png" alt="" class="featured-image-1"  onclick="display()">
+                    <img src="./j11 p4.png" alt="" class="featured-image-1"  onclick="display()">
+                </div>
+                <div class="big-image">
+                    <img src="./j11 p3.png" alt="" class="big-image-1">
+                </div>
+                <div class="content">
+                    <h3> ~ jordan 11 ~</h3>
+                    <p>Tinker Hatfield designed the 
+                        Air Jordan 11 for Michael Jordan’s
+                         return to the NBA in 1995.
+                    </p>
+                    <div class="price">
+                        ksh,3500 <span>ksh,4000</span>
+                    </div>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container">
+                <div class="small-image">
+                    <img src="./Nocta p1.png" alt="" class="featured-image2">
+                    <img src="./Nocta p2 .png" alt="" class="featured-image2">
+                    <img src="./Nocta p3.png" alt="" class="featured-image2">
+                    <img src="./Nocta p4.png" alt="" class="featured-image2">
+                </div>
+                <div class="big-image">
+                    <img src="./nocta 1.jpg" alt="" class="big-image2">
+                </div>
+                <div class="content">
+                    <h3>~ Nocta ~</h3>
+                    <p>Nike SNKRS NOCTA, 
+                        a collection for the collective,
+                         has arrived.
+                    </p>
+                    <div class="price">
+                        ksh,4200 <span>ksh,5500</span>
+                    </div>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container">
+                <div class="small-image">
+                    <img src="./bt p4.png" alt="" class="featured-image3" onclick="display()">
+                    <img src="./bt p0.png" alt="" class="featured-image3" onclick="display()">
+                    <img src="./bt p1.png" alt="" class="featured-image3" onclick="display()">
+                    <img src="./bt p2.png" alt="" class="featured-image3" onclick="display()">
+                </div>
+                <div class="big-image">
+                    <img src="./bt p3.png" alt="" class="big-image3">
+                </div>
+                <div class="content">
+                    <h3>~ Balenciaga track ~</h3>
+                    <p>Balenciaga Track Sneakers.
+                        Another iconic sneaker to come out
+                        of Demna Gvasalia's creative hat
+                    </p>
+                    <div class="price">
+                        ksh,3500 <span>ksh,4000</span>
+                    </div>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container">
+                <div class="small-image">
+                    <img src="./b p1.png" alt="" class="featured-image4">
+                    <img src="./b p2.png" alt="" class="featured-image4">
+                    <img src="./b p3.png" alt="" class="featured-image4">
+                    <img src="./b p4.png" alt="" class="featured-image4">
+                </div>
+                <div class="big-image">
+                    <img src="./b p0.png" alt="" class="big-image4">
+                </div>
+                <div class="content">
+                    <h3>~ Bottega Veneta Boots ~</h3>
+                    <p>Bottega Veneta BOOTS Bottega Veneta was 
+                        founded in Vicenza in 1966 as a modest
+                         leatherware emporium with a reputation
+                          for first-class craftsmanship.
+                    </p>
+                    <div class="price">
+                        ksh,6000 <span>ksh,7000</span>
+                    </div>
+                    <a href="#" class="btn">Add to cart</a>
+                </div>
+            </div>
+        </div>
+</section>
+<!--begining 0ff add to cart-->
+<section class="addcart" id="addcart">
+    <h1 class="heading">Add-cart</h1>
+    <div class="cartcontainer">
+        <div class="cartbox">
+
+        </div>
+    </div>
+
+</section>
+</div>
+<script src="shoestore.js"></script>
+</body>
+</html>
