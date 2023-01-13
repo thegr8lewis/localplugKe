@@ -1,0 +1,477 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:content-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    background:white;
+}
+html{
+    overflow-y: scroll;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right:0px;
+    left: 0;
+    z-index: 1000;
+    background:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    border-bottom: 2px solid rgb(219, 216, 216);
+    box-shadow: 0 10px 0 0 rgb(246, 244, 244);
+}
+header .logo{
+    font-size: 40px;
+    font-weight: 400;
+    margin-left:30px;
+    color: black;
+    font-family:fantasy;
+}
+header .navbar a{
+    font-size: 20px;
+    color: black;
+    margin-right: 70px;
+}
+header .navbar a:hover{
+    color: red;
+    transition: all .3s ease;
+}
+
+#menubtn{
+    cursor: pointer;
+    display: none;
+    width: 60px;
+    margin-left: 30px;
+}
+
+#menubtn:hover{
+    color: RED;
+}
+
+.icons{
+    display:flex;
+    margin-right: 40px;
+    gap: 10px;
+    font-size: 25px;
+}
+.call:hover,.whatsapp1:hover,.instagram:hover{
+    transform: scale(1.4);
+}
+.icons:hover :not(:hover){
+    opacity: 0.7;
+}
+section{
+    padding: 2rem 9%;
+}
+.home{
+    padding:30px 30px ;
+    position: relative;
+}
+
+.home .slide-container .slide{
+    min-height: 100px;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    padding: 0 10%;
+    padding-top: 0;
+    flex-wrap: wrap;
+    position: relative;
+}
+.home .slide-container .slide .content{
+    flex: 1 1 30rem;
+    animation: slidecontent 0.3s linear 0.5s backwards;
+    padding-top: 50px;
+}
+@keyframes slidecontent{
+    0%{
+        opacity: 0;
+        transform: translatex(-10rem);
+    }
+}
+.home .slide-container .slide .image{
+    flex:0 0 40rem;
+    position:relative;
+    z-index: 0;
+    width: 70%;
+    height: 500px;
+    padding-top:10%;
+    animation: shoe 0.9s linear;
+}
+@keyframes shoe{
+    0%{
+        transform: scale(0.9);
+    }
+}
+.home .slide-container .slide .image .shoe{
+    width:70%;
+
+}
+.home .slide-container .slide .content span{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.home .slide-container .slide .content h3{
+    color: black;
+    font-size: 50px;
+    font-style: italic;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.home .slide-container .slide .content p{
+    color: rgb(33, 32, 32);
+
+}
+.home .slide-container .slide .content .size{
+    margin-top: 10px;
+}
+.btn{
+    display: inline-block;
+    margin-top:10px;
+    border-radius: 3px;
+    border: 2px solid black;
+    color: black;
+    background: whitesmoke;
+    font-size: 15px;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    width: 100PX;
+    font-weight: bolder;
+    
+}
+.home .slide-container{
+    display: none;
+}
+.home .slide-container.active{
+    display: block;
+}
+.home #prevbtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    z-index: 100;
+    color: black;
+    border: transparent;
+    border-radius: 3px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+}
+#nextbtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    right: 40px;
+    color: black;
+    border: transparent;
+    border-radius: 3px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.home #prevbtn:hover,.home #nextbtn:hover{
+    background-color: whitesmoke;
+}
+
+
+
+
+/*responsive home section*/
+@media(max-width:600px){
+    #menubtn{
+        display: block;
+    }
+    .icons{
+        display:flex;
+        margin-right: 30px;
+        gap: 5px;
+        font-size: 15px;
+    }
+    .icons:hover :not(:hover){
+       opacity: 0.7;
+    }
+    header .logo{
+        font-size: 10px;
+        font-weight: 400;
+        color: black;
+        font-family:fantasy;
+    }
+    header .navbar{
+        position:absolute;
+        top: 100%;
+        left:-120%;
+        width: 100%;
+        background:white;
+        border-bottom: 2px solid rgb(219, 216, 216);
+        border-right: 2px solid rgb(219, 216, 216);
+        box-shadow: 0 10px 0 0 rgb(246, 244, 244);
+        border-top: 2px solid rgb(219, 216, 216);
+    }
+
+    header .navbar a{
+        font-size: 15px;
+        background: transparent;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        display: block;
+        text-align:left;
+        
+    }
+
+    header .navbar.active{
+        left: 0;
+    }
+    .home .slide-container .slide .image{
+       flex: 0 1 40rem;
+        position:relative;
+        z-index: 0;
+        width: 560px;
+        height: 200px;
+        padding-top:10%;
+        animation: shoe 0.9s linear;
+        border: transparent;
+    }
+    .home #prevbtn{
+        position: absolute;
+        top: 80%;
+        transform: translateY(-50%);
+        left: 10px;
+        z-index: 100;
+        font-size: 20px;
+    }
+    .home #nextbtn{
+        position: absolute;
+        top: 80%;
+        transform: translateY(-50%);
+        z-index: 100;
+        right: 10px;
+        font-size: 20px;
+    }
+    .featured .row .image-container{
+        display:inline-block;
+        gap: 1.5rem;
+        align-items:center;
+        flex-wrap: wrap;
+    }
+    .featured .row .image-container .small-image{
+        width: 20%;
+        display: flex;
+        gap:5px ;
+    }
+    .featured .row .image-container .small-image img{
+        width: 100%;
+        padding: .1rem;
+        border: 2px solid grey;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .featured .row .image-container .big-image img:hover{
+        transform:scale(1.03)
+    }
+    .featured .row .content h3{
+        font-size: 1rem;
+        color: black;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .featured .row .content p{
+        padding: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .featured .row .content .price{
+        color: black;
+        font-weight: bolder;
+        padding: 1rem 0;
+        font-size: 1.3rem;
+    }
+    .featured .row .content .price span{
+        color: rgb(241, 11, 11);
+        font-size: 1rem;
+        text-decoration: line-through;
+    }
+    
+}
+
+/*product section*/
+.heading{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom:20px ;
+    text-decoration: overline;
+    font-size:30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.product .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+.product .box-container .box{
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    flex: 1 1 20rem;
+}
+.product .box-container .content{
+    padding: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.product .box-container .box img{
+    height: 8rem;
+}
+.product .box-container .box img:hover{
+    height: 8rem;
+    transform: scale(1.09) ;
+}
+.product .box-container .box .icons{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    gap: 0.5rem;
+    left: -30%;
+    transition: all 0.5s ease;
+}
+.product .box-container .box:hover .icons{
+    left: 10px;
+}
+#sharebtn{
+    border: 2px solid grey;
+    width: 40px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#sharebtn:hover{
+    background:grey;
+}
+
+#likebtn{
+    border: 2px solid grey;
+    width: 40px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#likebtn:hover{
+    background: grey;
+}
+.product .box-container .content h3{
+    color: black;
+    font-size: 1rem;
+}
+.product .box-container .content .price{
+    color: black;
+    font-weight: bolder;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+.product .box-container .content .price span{
+    color: rgb(241, 11, 11);
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+/*new product*/
+.featured .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 2rem;;
+    width: 80%;
+    background: white;
+    align-items: center;
+    margin: 1.5rem;
+}
+.featured .row .content{
+    flex: 1 1 40rem;
+}
+.featured .row .image-container{
+    display:flex;
+    gap: 1.5rem;
+    align-items:center;
+    flex: 1 1 50rem;
+}
+.featured .row .image-container .small-image{
+    width: 20%;
+}
+.featured .row .image-container .big-image{
+    width: 70%;
+    padding: 1rem;
+}
+.featured .row .image-container .small-image img{
+    width: 100%;
+    padding: .1rem;
+    border: 2px solid grey;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.featured .row .image-container .small-image img:hover{
+    background-color: whitesmoke;
+    transform:scale(1.33)
+}
+.featured .row .image-container .big-image img{
+    width:100%;
+}
+.featured .row .image-container .big-image img:hover{
+    transform:scale(1.03)
+}
+.featured .row .content h3{
+    font-size: 1.5rem;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.featured .row .content p{
+    padding:5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.featured .row .content .price{
+    color: black;
+    font-weight: bolder;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+}
+.featured .row .content .price span{
+    color: rgb(241, 11, 11);
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+/* add to cart*/
+.cartcontainer{
+    width: 100%;
+    height: 500px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    overflow-y: scroll ;
+}
+.cartImg > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
